@@ -47,3 +47,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# User can formating the question
+gem 'ckeditor', '~> 4.2'
+gem 'paperclip', '~> 5.1.0' # This gem to provide upload file, and needed by ckeditor
+
+# This gem to convert words to number
+gem 'numbers_in_words', '~> 0.4.0'
+
+# Bootstrap generator to make develop more faster
+gem 'bootstrap-generators', '~> 3.3.4'
+gem 'record_tag_helper', '~> 1.0'
+
+# Learn Marionette
+gem 'marionette-rails', '~> 2.4.4'
+gem 'backbone-rails', '~> 1.2.3'
