@@ -9,7 +9,7 @@ class QuizMasterController < ApplicationController
     if question && (question.answer == params[:answer] || question.answer == answer_in_word)
       render json: 'CORRECT!', status: 200
     else
-      render json: 'INCORRECT!', status: 200
+      render json: 'WRONG!', status: 200
     end
   end
 end

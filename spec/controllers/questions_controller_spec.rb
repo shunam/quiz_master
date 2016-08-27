@@ -24,11 +24,17 @@ RSpec.describe QuestionsController, type: :controller do
   # Question. As you add validations to Question, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      question: 'Test Question',
+      answer: '1'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      question: nil,
+      answer: nil
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +109,17 @@ RSpec.describe QuestionsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          question: 'New Test Question',
+          answer: '2'
+        }
       }
 
       it "updates the requested question" do
         question = Question.create! valid_attributes
         put :update, params: {id: question.to_param, question: new_attributes}, session: valid_session
         question.reload
-        skip("Add assertions for updated state")
+        expect(assigns(:question)).to eq(question)
       end
 
       it "assigns the requested question as @question" do
