@@ -1,0 +1,13 @@
+<% @questions.each do |question| %>
+  <div class="row quiz-mode-bottom">
+    <div class="row col-md-12"><%= raw question.question %></div>
+    <div class="row">
+      <%= form_tag quiz_master_answer_path, {remote: true, class: 'form-quiz-master'} do %>
+        <%= hidden_field_tag :question_id, question.id %>
+        <div class="col-md-10"><%= text_field_tag :answer, '', class: 'form-control' %></div>
+        <div class="col-md-1"><%= submit_tag 'answer', class: 'btn btn-primary' %></div>
+        <div class="col-md-1 text-success notification"></div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

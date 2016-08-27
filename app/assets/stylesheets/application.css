@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.quiz-mode-bottom {
+  border-bottom: 4px solid;
+  padding-bottom: 25px;
+}
